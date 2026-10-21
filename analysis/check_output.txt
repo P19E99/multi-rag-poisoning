@@ -1,0 +1,160 @@
+PASS data coverage: 100 targets, 200 treatments, 8 views, 7 rewrites, 2 gold IDs
+PASS lexical Jaccard original_rewrite: 0.6434 (paper 0.6434)
+PASS lexical Jaccard rewrite_pair: 0.6161 (paper 0.6161)
+PASS retrieval top10 Jaccard poisoned: 0.7266 (paper 0.7266)
+PASS retrieval top10 Jaccard clean: 0.7032 (paper 0.7032)
+Table I: q | view exposure | median rank | rank1 | top5 | gold candidates | gold top5
+  1 | 100.0% | 1 | 85.0% | 100.0% | 1.78 | 1.70
+PASS Table I q=1 view exposure: 100.0000 (paper 100.0000)
+PASS Table I q=1 median rank: 1.0000 (paper 1.0000)
+PASS Table I q=1 rank1: 85.0000 (paper 85.0000)
+PASS Table I q=1 top5: 100.0000 (paper 100.0000)
+PASS gold candidate q=1: 1.7800 (paper 1.7800)
+PASS gold top5 q=1: 1.7000 (paper 1.7000)
+  2 | 100.0% | 1 | 82.0% | 100.0% | 1.80 | 1.66
+PASS Table I q=2 view exposure: 100.0000 (paper 100.0000)
+PASS Table I q=2 median rank: 1.0000 (paper 1.0000)
+PASS Table I q=2 rank1: 82.0000 (paper 82.0000)
+PASS Table I q=2 top5: 100.0000 (paper 100.0000)
+PASS gold top5 q=2: 1.6600 (paper 1.6600)
+  4 | 100.0% | 1 | 83.0% | 100.0% | 1.81 | 1.70
+PASS Table I q=4 view exposure: 100.0000 (paper 100.0000)
+PASS Table I q=4 median rank: 1.0000 (paper 1.0000)
+PASS Table I q=4 rank1: 83.0000 (paper 83.0000)
+PASS Table I q=4 top5: 100.0000 (paper 100.0000)
+PASS gold top5 q=4: 1.7000 (paper 1.7000)
+  8 | 100.0% | 1 | 83.0% | 100.0% | 1.81 | 1.69
+PASS Table I q=8 view exposure: 100.0000 (paper 100.0000)
+PASS Table I q=8 median rank: 1.0000 (paper 1.0000)
+PASS Table I q=8 rank1: 83.0000 (paper 83.0000)
+PASS Table I q=8 top5: 100.0000 (paper 100.0000)
+PASS gold candidate q=8: 1.8100 (paper 1.8100)
+PASS gold top5 q=8: 1.6900 (paper 1.6900)
+PASS subset q=2 targets with varying poison rank: 11.0000 (paper 11.0000)
+PASS subset q=2 all-combination top5 rate: 100.0000 (paper 100.0000)
+PASS subset q=4 targets with varying poison rank: 12.0000 (paper 12.0000)
+PASS subset q=4 all-combination top5 rate: 100.0000 (paper 100.0000)
+PASS MaxScore q=2 median rank: 1.0000 (paper 1.0000)
+PASS MaxScore q=2 top5 rate: 100.0000 (paper 100.0000)
+PASS MaxScore q=4 median rank: 1.0000 (paper 1.0000)
+PASS MaxScore q=4 top5 rate: 100.0000 (paper 100.0000)
+PASS MaxScore q=8 median rank: 1.0000 (paper 1.0000)
+PASS MaxScore q=8 top5 rate: 100.0000 (paper 100.0000)
+PASS AvgScore q=2 median rank: 1.0000 (paper 1.0000)
+PASS AvgScore q=2 top5 rate: 100.0000 (paper 100.0000)
+PASS AvgScore q=4 median rank: 1.0000 (paper 1.0000)
+PASS AvgScore q=4 top5 rate: 100.0000 (paper 100.0000)
+PASS AvgScore q=8 median rank: 1.0000 (paper 1.0000)
+PASS AvgScore q=8 top5 rate: 100.0000 (paper 100.0000)
+PASS outcome coverage: 3,200 unique rows / 100 targets / 16 cells per model
+Table II: model condition q | ASR [Jeffreys 95% CI] | abstain | EM | F1 (percent)
+  qwen3-8b C1 q=1: 20.83 [13.65,29.75] | 0.0 | 5.00 | 21.39
+PASS Table I corrected ASR q=1: 20.8333 (paper 20.8000)
+  qwen3-8b C1 q=2: 20.00 [12.92,28.87] | 0.0 | 6.00 | 21.64
+PASS Table I corrected ASR q=2: 20.0000 (paper 20.0000)
+  qwen3-8b C1 q=4: 17.71 [11.09,26.24] | 0.0 | 4.00 | 20.11
+PASS Table I corrected ASR q=4: 17.7083 (paper 17.7000)
+  qwen3-8b C1 q=8: 17.71 [11.09,26.24] | 0.0 | 5.00 | 21.57
+PASS Table I corrected ASR q=8: 17.7083 (paper 17.7000)
+  qwen3-8b C2 q=1: 8.08 [3.89,14.67] | 27.0 | 41.00 | 49.37
+PASS Qwen C2 q=1 abstention range
+  qwen3-8b C2 q=2: 10.10 [5.31,17.18] | 26.0 | 39.00 | 48.27
+PASS Qwen C2 q=2 abstention range
+  qwen3-8b C2 q=4: 9.09 [4.59,15.93] | 28.0 | 37.00 | 47.06
+PASS Qwen C2 q=4 abstention range
+  qwen3-8b C2 q=8: 9.09 [4.59,15.93] | 28.0 | 37.00 | 46.22
+PASS Qwen C2 q=8 abstention range
+  qwen3-8b C3 q=1: 42.71 [33.15,52.70] | 0.0 | 0.00 | 17.17
+  qwen3-8b C3 q=2: 43.16 [33.53,53.20] | 0.0 | 0.00 | 16.88
+  qwen3-8b C3 q=4: 43.75 [34.13,53.74] | 0.0 | 0.00 | 16.74
+  qwen3-8b C3 q=8: 43.75 [34.13,53.74] | 0.0 | 0.00 | 16.70
+  qwen3-8b C4 q=1: 25.25 [17.49,34.44] | 27.0 | 26.00 | 35.29
+PASS Qwen C4 q=1 abstention range
+  qwen3-8b C4 q=2: 21.21 [14.06,30.02] | 28.0 | 30.00 | 39.33
+PASS Qwen C4 q=2 abstention range
+  qwen3-8b C4 q=4: 25.25 [17.49,34.44] | 20.0 | 33.00 | 42.33
+PASS Qwen C4 q=4 abstention range
+  qwen3-8b C4 q=8: 21.21 [14.06,30.02] | 24.0 | 32.00 | 40.53
+PASS Qwen C4 q=8 abstention range
+  llama-3.1-8b-instruct C1 q=1: 12.50 [7.02,20.20] | 0.0 | 13.00 | 28.09
+  llama-3.1-8b-instruct C1 q=2: 14.74 [8.70,22.88] | 0.0 | 12.00 | 27.33
+  llama-3.1-8b-instruct C1 q=4: 13.68 [7.89,21.65] | 0.0 | 12.00 | 26.98
+  llama-3.1-8b-instruct C1 q=8: 13.68 [7.89,21.65] | 0.0 | 13.00 | 27.38
+  llama-3.1-8b-instruct C2 q=1: 9.09 [4.59,15.93] | 10.0 | 38.00 | 54.26
+PASS Llama C2 q=1 abstention range
+  llama-3.1-8b-instruct C2 q=2: 10.20 [5.37,17.34] | 11.0 | 40.00 | 55.21
+PASS Llama C2 q=2 abstention range
+  llama-3.1-8b-instruct C2 q=4: 9.09 [4.59,15.93] | 10.0 | 39.00 | 55.14
+PASS Llama C2 q=4 abstention range
+  llama-3.1-8b-instruct C2 q=8: 10.10 [5.31,17.18] | 10.0 | 40.00 | 55.31
+PASS Llama C2 q=8 abstention range
+  llama-3.1-8b-instruct C3 q=1: 38.54 [29.26,48.50] | 0.0 | 10.00 | 21.68
+  llama-3.1-8b-instruct C3 q=2: 33.68 [24.78,43.56] | 0.0 | 10.00 | 21.72
+  llama-3.1-8b-instruct C3 q=4: 35.79 [26.69,45.74] | 0.0 | 9.00 | 21.85
+  llama-3.1-8b-instruct C3 q=8: 35.79 [26.69,45.74] | 0.0 | 8.00 | 20.66
+  llama-3.1-8b-instruct C4 q=1: 35.35 [26.47,45.08] | 7.0 | 35.00 | 44.89
+PASS Llama C4 q=1 abstention range
+  llama-3.1-8b-instruct C4 q=2: 33.67 [24.90,43.40] | 9.0 | 35.00 | 44.97
+PASS Llama C4 q=2 abstention range
+  llama-3.1-8b-instruct C4 q=4: 33.33 [24.63,42.99] | 11.0 | 35.00 | 45.56
+PASS Llama C4 q=4 abstention range
+  llama-3.1-8b-instruct C4 q=8: 37.37 [28.32,47.16] | 12.0 | 33.00 | 43.50
+PASS Llama C4 q=8 abstention range
+PASS Table II qwen3-8b C1 q=1: all 6 metrics
+PASS Table II qwen3-8b C1 q=2: all 6 metrics
+PASS Table II qwen3-8b C1 q=4: all 6 metrics
+PASS Table II qwen3-8b C1 q=8: all 6 metrics
+PASS Table II qwen3-8b C2 q=1: all 6 metrics
+PASS Table II qwen3-8b C2 q=2: all 6 metrics
+PASS Table II qwen3-8b C2 q=4: all 6 metrics
+PASS Table II qwen3-8b C2 q=8: all 6 metrics
+PASS Table II qwen3-8b C3 q=1: all 6 metrics
+PASS Table II qwen3-8b C3 q=2: all 6 metrics
+PASS Table II qwen3-8b C3 q=4: all 6 metrics
+PASS Table II qwen3-8b C3 q=8: all 6 metrics
+PASS Table II qwen3-8b C4 q=1: all 6 metrics
+PASS Table II qwen3-8b C4 q=2: all 6 metrics
+PASS Table II qwen3-8b C4 q=4: all 6 metrics
+PASS Table II qwen3-8b C4 q=8: all 6 metrics
+PASS Table II llama-3.1-8b-instruct C1 q=1: all 6 metrics
+PASS Table II llama-3.1-8b-instruct C1 q=2: all 6 metrics
+PASS Table II llama-3.1-8b-instruct C1 q=4: all 6 metrics
+PASS Table II llama-3.1-8b-instruct C1 q=8: all 6 metrics
+PASS Table II llama-3.1-8b-instruct C2 q=1: all 6 metrics
+PASS Table II llama-3.1-8b-instruct C2 q=2: all 6 metrics
+PASS Table II llama-3.1-8b-instruct C2 q=4: all 6 metrics
+PASS Table II llama-3.1-8b-instruct C2 q=8: all 6 metrics
+PASS Table II llama-3.1-8b-instruct C3 q=1: all 6 metrics
+PASS Table II llama-3.1-8b-instruct C3 q=2: all 6 metrics
+PASS Table II llama-3.1-8b-instruct C3 q=4: all 6 metrics
+PASS Table II llama-3.1-8b-instruct C3 q=8: all 6 metrics
+PASS Table II llama-3.1-8b-instruct C4 q=1: all 6 metrics
+PASS Table II llama-3.1-8b-instruct C4 q=2: all 6 metrics
+PASS Table II llama-3.1-8b-instruct C4 q=4: all 6 metrics
+PASS Table II llama-3.1-8b-instruct C4 q=8: all 6 metrics
+PASS Cochran Q qwen3-8b C1 (df=3,n=95): 1.6000 (paper 1.6000)
+PASS Cochran p qwen3-8b C1: 0.6594 (paper 0.6590)
+PASS Cochran n qwen3-8b C1: 95.0000 (paper 95.0000)
+PASS percentile bootstrap 95% upper q1-q8 qwen3-8b C1 (n=95): 7.3684 (paper 7.4000)
+PASS percentile bootstrap 95% upper q1-q8 qwen3-8b C3 (n=95): 4.2105 (paper 4.2000)
+PASS Cochran Q llama-3.1-8b-instruct C1 (df=3,n=95): 3.0000 (paper 3.0000)
+PASS Cochran p llama-3.1-8b-instruct C1: 0.3916 (paper 0.3920)
+PASS Cochran n llama-3.1-8b-instruct C1: 95.0000 (paper 95.0000)
+PASS percentile bootstrap 95% upper q1-q8 llama-3.1-8b-instruct C1 (n=95): 2.1053 (paper 2.1000)
+PASS percentile bootstrap 95% upper q1-q8 llama-3.1-8b-instruct C3 (n=95): 8.4211 (paper 8.4000)
+McNemar exact two-sided + Holm within each model/comparison across four q
+  qwen3-8b C2vsC1: exact=0.00183105,0.00195312,0.0117188,0.0117188 Holm=0.00732422,0.00732422,0.0234375,0.0234375
+PASS Qwen C2vsC1 all q significant
+  qwen3-8b C4vsC3: exact=0.00154388,5.72205e-06,0.000121117,2.98023e-06 Holm=0.00154388,1.71661e-05,0.000242233,1.19209e-05
+PASS Qwen C4vsC3 all q significant
+  llama-3.1-8b-instruct C2vsC1: exact=0.289062,0.34375,0.179688,0.289062 Holm=0.867188,0.867188,0.71875,0.867188
+PASS Llama C2vsC1 all q nonsignificant
+PASS Llama C2vsC1 p floor at paper precision (2 decimals)
+  llama-3.1-8b-instruct C4vsC3: exact=0.647606,1,0.803619,1 Holm=1,1,1,1
+PASS Llama C4vsC3 all q nonsignificant
+PASS Llama C4vsC3 p floor at paper precision (2 decimals)
+Llama C2 Final answer marker rate: q=[98.0, 99.0, 99.0, 98.0], overall=98.50%
+PASS Llama C2 format adherence 96.5-98.5%
+Llama C4 Final answer marker rate: q=[96.0, 97.0, 97.0, 96.0], overall=96.50%
+PASS Llama C4 format adherence 96.5-98.5%
+CHECK RESULT: PASS
